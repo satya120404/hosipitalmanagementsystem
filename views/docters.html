@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - Hospital Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #005f73;
+            color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .doctor-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .doctor-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .doctor-card:hover {
+            transform: translateY(-5px);
+        }
+        .doctor-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .doctor-card h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .doctor-card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Doctors</h1>
+    </header>
+
+    <main>
+        <h2>Meet Our Expert Medical Team</h2>
+        <div class="doctor-list">
+            <div class="doctor-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.ff5AhVmDD4A9jpDhQqnXtwAAAA&pid=Api&P=0&h=180" alt="Dr. Sarah Johnson">
+                <h3>Dr. Sarah Johnson</h3>
+                <p>Specialty: Cardiologist</p>
+                <p>Experience: 12 years</p>
+                <p>Dr. Sarah is an expert in diagnosing and treating heart-related conditions.</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.ff5AhVmDD4A9jpDhQqnXtwAAAA&pid=Api&P=0&h=180" alt="Dr. James Williams">
+                <h3>Dr. James Williams</h3>
+                <p>Specialty: Neurologist</p>
+                <p>Experience: 15 years</p>
+                <p>Dr. James specializes in the treatment of neurological disorders.</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.ff5AhVmDD4A9jpDhQqnXtwAAAA&pid=Api&P=0&h=180" alt="Dr. Emily Davis">
+                <h3>Dr. Emily Davis</h3>
+                <p>Specialty: Pediatrician</p>
+                <p>Experience: 10 years</p>
+                <p>Dr. Emily is a compassionate doctor specializing in children’s health.</p>
+            </div>
+            <div class="doctor-card">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.ff5AhVmDD4A9jpDhQqnXtwAAAA&pid=Api&P=0&h=180" alt="Dr. Michael Brown">
+                <h3>Dr. Michael Brown</h3>
+                <p>Specialty: Orthopedic Surgeon</p>
+                <p>Experience: 18 years</p>
+                <p>Dr. Michael is an expert in bone, joint, and muscle surgeries.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System | Committed to Excellence in Healthcare</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="styl.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            display: none;
+        }
+
+        form.active {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-btn {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .toggle-btn a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .toggle-btn a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <header>
+            <h1 id="form-title">Login to Doctor Appointment System</h1>
+        </header>
+        
+        <form id="login-form" class="active" action="/signin" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="signup-form" action="/signup" method="POST">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="username" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="password" required><br>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm_password" required><br>
+            <button type="submit">Sign Up</button>
+        </form>
+
+       
+        <div class="toggle-btn">
+            <p id="toggle-text">Don't have an account? <a id="toggle-link">Sign Up</a></p>
+        </div>
+    </div>
+
+    <script>
+        
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const formTitle = document.getElementById('form-title');
+        const toggleText = document.getElementById('toggle-text');
+        const toggleLink = document.getElementById('toggle-link');
+
+        
+        toggleLink.addEventListener('click', function () {
+            if (loginForm.classList.contains('active')) {
+                loginForm.classList.remove('active');
+                signupForm.classList.add('active');
+                formTitle.innerText = 'Create Your Account';
+                toggleText.innerHTML = 'Already have an account? <a id="toggle-link">Login</a>';
+            } else {
+                signupForm.classList.remove('active');
+                loginForm.classList.add('active');
+                formTitle.innerText = 'Login to Doctor Appointment System';
+                toggleText.innerHTML = 'Don\'t have an account? <a id="toggle-link">Sign Up</a>';
+            }
+        });
+    </script>
+</body>
+</html>

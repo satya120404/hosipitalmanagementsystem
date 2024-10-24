@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Hospital Management System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        input[type="submit"]:hover {
+            background-color: #005f73;
+        }
+        footer {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Book an Appointment</h1>
+    </header>
+
+    <main>
+        <h2>Fill out the form to book an appointment</h2>
+        <form action="/bookappointment" method="POST">
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" name="patientName" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="doctor">Choose a Doctor:</label>
+            <select id="doctor" name="doctor" required>
+                <option value="">--Select a Doctor--</option>
+                <option value="Dr. Sarah Johnson">Dr. Sarah Johnson - Cardiologist</option>
+                <option value="Dr. James Williams">Dr. James Williams - Neurologist</option>
+                <option value="Dr. Emily Davis">Dr. Emily Davis - Pediatrician</option>
+                <option value="Dr. Michael Brown">Dr. Michael Brown - Orthopedic Surgeon</option>
+            </select>
+
+            <label for="date">Choose Appointment Date:</label>
+            <input type="date" id="date" name="appointmentDate" required>
+
+            <label for="message">Additional Notes:</label>
+            <textarea id="message" name="notes" placeholder="Any additional information or symptoms..." rows="4"></textarea>
+
+            <input type="submit" value="Book Appointment">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hospital Management System | Committed to Excellence in Healthcare</p>
+    </footer>
+</body>
+</html>
